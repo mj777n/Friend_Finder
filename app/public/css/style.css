@@ -1,0 +1,12 @@
+.jumbotron {
+    color: white;
+    background: green;
+}
+
+strong {
+    color: green;
+}
+
+h1, h4 {
+    font-weight: 900;
+}

@@ -10,47 +10,47 @@ module.exports = function(app) {
     var match = {
 	  name: "",
 	  photo:"",
-	  friendDiff: 1000
+	  friendDiff: 40
     };
-
-    var user = req.body;
+console.log(req.body);
+	var user = req.body;
     var userName = user.name;
     var userTotal = user.scores;
-
+console.log("Line 19 in apiRoutes");
+console.log("var userTotal = "+userTotal);
     var temp = userTotal.map(function(data) {
       return parseInt(data, 10);
-    });
+	});
+console.log("Line 23 in apiRoutes");
     user = {
 	  name:  req.body.name,
 	  photo: req.body.photo,
 	  scores:temp
 	};
-    console.log("Name: "+userName);
-    console.log("User score: "+userTotal);
+    console.log("\n"+"The User is: "+userName);
+    console.log(userName+"'s score: "+userTotal);
     var sum = temp.reduce((a, temp) => a + temp, 0);
-    console.log("Total of user's score is "+sum);
-    console.log("The Best Match: "+match.friendDiff);
-    console.log("**********************************************");
+    console.log("Total of "+userName+"'s score is "+sum);
+    console.log("The Worst Match(ie. difference) would be: "+match.friendDiff);
+    console.log("****************************************"+"\n");
 	
 	for (var i=0; i<friends.length; i++) {
-		console.log(friends[i].name);
-		totalDiff = 0;
-		console.log("Total Difference is "+totalDiff);
-		console.log("In for loop> The Best Match: "+match.friendDiff);	
-
-		var newFriendScore = friends[i].score.reduce((a,temp) =>a + temp, 0);
-		console.log("Total friend score is "+newFriendScore);
+		console.log("==============================");
+		console.log("Comparing with: "+friends[i].name);
+		totalDiff = 0;	
+		var newFriendScore = friends[i].results.reduce((a,temp) =>a + temp, 0);
+		console.log(friends[i].name+"'s "+"total score is: "+newFriendScore);
+	// use Absolute Value (abs) to avoid negative numbers	
 		totalDiff += Math.abs(sum - newFriendScore);
-		console.log("totalDiff -------------> "+totalDiff);
-
+	// add up the differences in each score by question for each "friend" in Friends	
 		if (totalDiff <=match.friendDiff) {
 			match.name = friends[i].name;
 			match.photo = friends[i].photo;
 			match.friendDiff = totalDiff;
 		}
-		console.log("totalDiff is: "+totalDiff);
+		console.log("The difference is -------------> "+totalDiff);
 	}
-	console.log(match);
+	console.log("\n"+"*** The BEST match is with: "+match.name+"\n");
 	friends.push(user);
 	console.log("New User Added");
 	console.log(user);
@@ -58,29 +58,3 @@ module.exports = function(app) {
   });
 };
 
-
-
-	
-
-   //loops through nbaPlayer array, and compares each index in score array to corresponding user index, calculating difference
-	//     nbaMatches.forEach(player => {
-	//       const compareArr = player.scores;
-	// 	  let diffScore = 0;
-		  
-	//       for (let i = 0; i < userArr.length; i++) {
-	//         let diffTemp = parseInt(userArr[i]) - compareArr[i];
-	//         if (diffTemp < 0) {
-	//           diffTemp *= -1;
-	//         }
-	//         diffScore += diffTemp;
-	//       }
-	//       if (diffScore < lowScore) {
-	//         lowScore = diffScore;
-	//         playerMatch = player;
-	//       }
-	//     });	
-	//     const matchScore = parseInt(((40 - lowScore) / 40) * 100);
-	//     playerMatch.matchPct = matchScore;
-	//     res.json(playerMatch);
-	//   });
-	// };

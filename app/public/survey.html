@@ -6,15 +6,50 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Friend Finder</title>
     <!-- link for Bootstrap styling -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">        
-    <!-- script link for Bootstrap JQuery and JQuery package -->   
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <link 
+    rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous"/>
+
+      <!-- link for Chosen framework-->
+      <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"/>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
     <!-- link for Font-Awesome icons -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <!-- link for Chosen framework-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>    
+
+
+    
+    <!-- script links for JQuery and Bootstrap/js packages THESE 2 ARE CORRECT-->
+
+
+    <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+    crossorigin="anonymous"></script>
+  
+    <!-- <script 
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script> -->
+
+  <!-- <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"> Was working with this -->
+  <!-- </script>  -->
+  <!-- <script
+    src="https://code.jquery.com/jquery.js"> 
+  </script>  -->
+  <!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js">
+  </script> -->
+
 </head>
 <body>
   <div class="container">
@@ -36,70 +71,36 @@
     <h4>Link to Photo Image (Required)</h4>
       <input type="text" name="" id="photo" class="form=control" required>
       <hr>
+
     <h3><strong>Question 1</strong></h3>
     <h4>I like to take risks if the reward is worth it.</h4>
       <select class="chosen-select" id="q1">
           <!-- style="display: none;"> -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-      <!-- <div class="chosen-container chosen-container-single chosen-container-active" style="width: 150px;" title id="q1_chosen">
-        <a class="chosen-single chosen-default">
-          <span>Select an option</span>
-        <div><b></b></div>
-        </a>
-        <div class="chosen-drop">
-          <div class="chosen-search">
-            <input type="text" autocomplete="off">
-          </div>
-          <ul class="chosen-results">
-            <li class="active-result " data-option-array-index="1" style>1 (Strongly Disagree)</li>
-            <li class="active-result " data-option-array-index="2" style>2</li>  
-            <li class="active-result " data-option-array-index="3" style>3</li>
-            <li class="active-result " data-option-array-index="4" style>4</li>
-            <li class="active-result " data-option-array-index="5" style>5 (Strongly Agree</li>
-          </ul>
-        </div>
-      </div>    -->
-    
+
     <h3><strong>Question 2</strong></h3>
     <h4>I like long walks on the beach with someone special to me.</h4>
       <select class="chosen-select" id="q2">
       <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select>
-    <!-- <div class="chosen-container chosen-container-single chosen-container-active" style="width: 150px;" title id="q2_chosen">
-      <a class="chosen-single chosen-default">
-        <span>Select an option</span>
-      <div><b></b></div>
-      </a>
-      <div class="chosen-drop">
-        <div class="chosen-search">
-          <input type="text" autocomplete="off">
-        </div>
-        <ul class="chosen-results">
-          <li class="active-result" data-option-array-index="1" style>1 (Strongly Disagree)</li>
-          <li class="active-result" data-option-array-index="2" style>2</li>  
-          <li class="active-result" data-option-array-index="3" style>3</li>
-          <li class="active-result" data-option-array-index="4" style>4</li>
-          <li class="active-result" data-option-array-index="5" style>5 (Strongly Agree</li>
-        </ul>
-      </div>
-    </div> -->
+
     <h3><strong>Question 3</strong></h3>
     <h4>I like to travel and see new places.</h4>
       <select class="chosen-select" id="q3">
     <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -111,7 +112,7 @@
     <h4>I believe everyone has some inherent goodness in them.</h4>
       <select class="chosen-select" id="q4">
       <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -123,7 +124,7 @@
     <h4>I prefer to find the quickest way to do things.</h4>
       <select class="chosen-select" id="q5">
     <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -135,7 +136,7 @@
     <h4>I value and appreciate my family.</h4>
       <select class="chosen-select" id="q6">
     <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -147,7 +148,7 @@
     <h4>I'm a better listener than talker.</h4>
       <select class="chosen-select" id="q7">
       <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -159,19 +160,19 @@
     <h4>I think it's important to always look good in public.</h4>
       <select class="chosen-select" id="q8">
       <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
-        <option value9="5">5 (Strongly Agree)</option>
+        <option value="5">5 (Strongly Agree)</option>
       </select>
 
     <h3><strong>Question 9</strong></h3>
     <h4>I don't worry about relationships because I can always make new friends.</h4>
       <select class="chosen-select" id="q9">
       <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -183,34 +184,38 @@
     <h4>I'd rather be just on time versus 10 minutes early.</h4>
       <select class="chosen-select" id="q10">
       <!-- style="display: none;" -->
-        <option value></option>
+        <option value>Select an option</option>
         <option value="1">1 (Strongly Disagree)</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5 (Strongly Agree)</option>
       </select><br><br>
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-      <i class="fa fa-check-circle" aria-hidden="true">
-          <!-- ::before -->
-      </i>Submit
-    </button><hr>
+      <!-- end question section -->
+
+    <button 
+      type="submit" 
+      class="btn btn-primary btn-lg btn-block" 
+      id="submit"
+      >
+      <i class="fa fa-check-circle" aria-hidden="true"></i>Submit
+    </button><hr><br>
+
     <footer class="footer text-center">
       <div class="container">
-        <p><a href="/api/friend">API Friends List</a>
-             | 
+        <p><a href="/api/friends">API Friends List</a> | 
             <a href="https://github.com/mj777n/Friend_Finder">GitHub Repo</a><br>
         </p>
       </div>    
     </footer>
     </div>  <!-- close survey div-->
 
-
-  <div id="results-modal" class="modal fade" role="dialog">
+  <!-- <div id="results-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"> -->
+  <div id="myModal" class="modal hide fade"  role="dialog">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">x</button>
+          <button type="button" class="close" data-dismiss="modal"></button>
           <h2 class="modal-title">
             <strong>Your Best Match IS</strong>
           </h2>
@@ -232,8 +237,12 @@
   </div>  <!-- close result-modal-->
 </div>  <!-- close main container-->
 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 <script type="text/javascript">
-  $("#submit").on("click", function() {
+// <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js">
+
+  $("#submit").on("click", function(event) {
+    event.preventDefault();
     function validateForm() {
       var isValid = true;
       $("form-control").each(function() { 
@@ -245,27 +254,33 @@
       return isValid;
     }  
     if (validateForm() === true) {
+      console.log("The user inputs are all VALID");
         var user = {
-            name: $("name").val(),
-            photo:$("photo").val(),
+            name: $("#name").val(),
+            photo:$("#photo").val(),
             scores: [
-              $("q1").val(),
-              $("q2").val(),
-              $("q3").val(),
-              $("q4").val(),
-              $("q5").val(),
-              $("q6").val(),
-              $("q7").val(),
-              $("q8").val(),
-              $("q9").val(),
-              $("q10").val()
+              $("#q1").val(),
+              $("#q2").val(),
+              $("#q3").val(),
+              $("#q4").val(),
+              $("#q5").val(),
+              $("#q6").val(),
+              $("#q7").val(),
+              $("#q8").val(),
+              $("#q9").val(),
+              $("#q10").val()
             ]
         };
+        // console.log(user);
         var currentURL = window.location.origin;
-        $.post(currentURL + "/api/friends", user, function(data) {
+        $.post(currentURL+"/api/friends", user, function(data) {
           $("#matchName").text(data.name);
+          console.log("Name = "+data.name);
           $("#matchImg").attr("src",data.photo);
-          $("resultsModal").modal("toggle");
+          console.log("In line 306");
+          // $("#results-modal").modal("show");
+          $("#myModal").modal("toggle");
+          console.log("Line 309");
         });
     } else {
       alert ("Please complete all the fields before submitting.");
