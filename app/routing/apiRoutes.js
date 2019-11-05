@@ -1,8 +1,11 @@
-var friends = require("../data/friends.js");
+// var friends = require("../data/friendsData.js/index.js");
+var friends = require("../data/friendsData");
 	
 module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
-    res.json(friends);
+	console.log("line 7 in apiRoutes")  
+	res.json(friends);
+	
   });
 	
   app.post("/api/friends", (req, res) => {
@@ -16,12 +19,10 @@ console.log(req.body);
 	var user = req.body;
     var userName = user.name;
     var userTotal = user.scores;
-console.log("Line 19 in apiRoutes");
 console.log("var userTotal = "+userTotal);
     var temp = userTotal.map(function(data) {
       return parseInt(data, 10);
 	});
-console.log("Line 23 in apiRoutes");
     user = {
 	  name:  req.body.name,
 	  photo: req.body.photo,
