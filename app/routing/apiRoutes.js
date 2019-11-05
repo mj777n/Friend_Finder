@@ -3,7 +3,6 @@ var friends = require("../data/friendsData");
 	
 module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
-	console.log("line 7 in apiRoutes")  
 	res.json(friends);
 	
   });
@@ -18,7 +17,7 @@ module.exports = function(app) {
 console.log(req.body);
 	var user = req.body;
     var userName = user.name;
-    var userTotal = user.scores;
+    var userTotal = user.results;
 console.log("var userTotal = "+userTotal);
     var temp = userTotal.map(function(data) {
       return parseInt(data, 10);
@@ -26,7 +25,7 @@ console.log("var userTotal = "+userTotal);
     user = {
 	  name:  req.body.name,
 	  photo: req.body.photo,
-	  scores:temp
+	  results:temp
 	};
     console.log("\n"+"The User is: "+userName);
     console.log(userName+"'s score: "+userTotal);

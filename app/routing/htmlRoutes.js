@@ -10,17 +10,10 @@ module.exports=function(app) {
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "/../public/home.html"));
   });
-  // app.get("/api/friends", function(req, res) {
-  //   res.json(friends)
-  // });
 
   // If no matching route is found default to home
   app.get("*", function(req, res) {
     console.log ("In the * get");
     res.sendFile(path.join(__dirname, "/../public/home.html"));
   });
-
-  // app.use(function(req, res) {
-  //   res.sendFile(path.join(__dirname + "/../public/home.html"));
-  // });
 }
