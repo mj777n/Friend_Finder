@@ -1,5 +1,6 @@
 var friends = require("../data/friendsData");
-	
+
+  // api/friends will send json data of friends array to browser
 module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
 	res.json(friends);	

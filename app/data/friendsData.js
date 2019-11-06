@@ -17,7 +17,6 @@ var friends = [
     {
         name: "Clark",
         photo: "http://www.legendaryclarkgable.com/images/rhett/Rhett_Update01.jpg",
-        // photo: "C:\Users\GoSox\Desktop\repo_sandbox\13 - Express\02-Homework\Friend_Finder\app\public\assets\images\clark_g.jpeg",
         results: [2,3,2,3,3,3,4,3,4,2,]
     },
     {
@@ -61,4 +60,5 @@ var friends = [
         results: [4,1,1,1,5,1,1,1,5,5]
     }
 ];
+ // makes the friends array accessible to other files using require
 module.exports = friends;

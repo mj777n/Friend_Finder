@@ -19,12 +19,12 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css"/>
 
+<!-- script links for JQuery and Bootstrap/js packages THESE 2 ARE CORRECT-->
   <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>    
 
-    <!-- script links for JQuery and Bootstrap/js packages THESE 2 ARE CORRECT-->
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
@@ -163,6 +163,7 @@
       </select><hr><br><br>
       <!-- end question section -->
 
+      <!-- below is submit button - which triggers jquery block below -->
     <button 
       type="submit" 
       class="btn btn-primary btn-lg btn-block" 
@@ -216,6 +217,7 @@
 
   $("#submit").on("click", function(event) {
     event.preventDefault();
+      // here we validate the user has entered(selected) a reply to each question
     function validateForm() {
       var isValid = true;
       $("form-control").each(function() { 
@@ -226,6 +228,7 @@
       });
       return isValid;
     }  
+      // if form is valid; move the user's answers to "user" array
     if (validateForm() === true) {
       console.log("The user inputs are all VALID");
         var user = {
@@ -244,20 +247,20 @@
               $("#q10").val()
             ]
         };
-        // console.log(user);
         var currentURL = window.location.origin;
+           // post the users data to the modal
         $.post(currentURL+"/api/friends", user, function(data) {
           $("#matchName").text(data.name);
           console.log("Name = "+data.name);
           $("#matchImg").attr("src",data.photo);
-          console.log("In line 306");
           // $("#results-modal").modal("show");
           $("#myModal").modal("toggle");
-          console.log("Line 309");
         });
     } else {
       alert ("Please complete all the fields before submitting.");
     }
+     // option to clear out the form (ie. survey question results) next
+     
   });
 </script>
 </body>
