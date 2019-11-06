@@ -1,9 +1,11 @@
 # Welcome to "The Celebrity Friend_Finder"
 
 Find a celebrity friend that likes what you like:
-  Provide your responses to 10 questions that tell us a little about yourself.  Then the App will do the rest.
+  Provide your responses to 10 questions that tell us a little about yourself.  Then watch the App will do the rest.  
 
 Once you find your new Celebrity Friend, the App will then store your profile into the database to be matched up with new friends after you.
+
+You can continue to add more profiles.  
 
 ## About the App
  * The Directory structure is as follows:
@@ -21,7 +23,7 @@ Once you find your new Celebrity Friend, the App will then store your profile in
         - htmlRoutes.js
     - node_modules
     - package.json
-    - server.js  (Our "Express Server" is started, and runs here)
+    - server.js  (Our "Express Server" is setup, started, and runs here)
 
 ## Built with
  * HTML and CSS
@@ -35,4 +37,8 @@ Once you find your new Celebrity Friend, the App will then store your profile in
 * Deployed to my personal gitHub https://github.com/mj777n/Friend_Finder
 
 ## Functionality
+
+## ************************************************************* ##
+## Demo of Ap (using TinyTake) ##
+[DEMO MY CELEBRITY-FRIEND-FINDER HERE](https://ttprivatenew.s3.amazonaws.com/pulse/mjnorato-aol/attachments/11846699/The-Celebrity-Friend-Finder.mp4)
 
